@@ -1,17 +1,19 @@
-<nav id="tf-menu" class="navbar navbar-default">
-  <div class="container">
-      
-    <%= render 'layouts/nav/toggle' %>
+<header id="header">
+  <h1>Stargazers</h1>
+  <nav id="tf-menu" class="navbar navbar-default">
+    <div class="container">
+        
+      <%= render 'layouts/nav/toggle' %>
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      
-      <%= render 'layouts/nav/routes' %>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        
+        <%= render 'layouts/nav/routes' %>
 
-      <ul class="nav navbar-nav navbar-right">
-        <%= render 'layouts/social_media' %>
-        <%= render 'layouts/nav/user_auth' %>
-      </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <%= render 'layouts/nav/user_auth' %>
+        </ul>
+      </div>
+
     </div>
-
-  </div>
-</nav>
+  </nav>
+</header>
