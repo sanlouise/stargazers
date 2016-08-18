@@ -25,6 +25,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'spring'
   gem 'rubocop'
+  gem 'listen'
   # Testing
   gem 'rspec-rails'
   gem 'shoulda-matchers'
