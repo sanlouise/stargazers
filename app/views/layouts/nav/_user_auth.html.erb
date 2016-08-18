@@ -6,7 +6,6 @@
     <%= link_to "#{current_user.email}<b class='caret'></b>".html_safe, profile_path(current_user.profile), class: "dropdown-toggle", id: "user-profile", data: { toggle: 'dropdown' }, role: "button", "aria-expanded" => "false" %>
 
     <ul class="dropdown-menu" role="menu">
-      
       <li class="divider"></li>
       <li><%= link_to "Logout", destroy_user_session_path, method: :delete %> </li>
     </ul>
