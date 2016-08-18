@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Stargazers</title>
-    <%= csrf_meta_tags %>
+<head>
+  <%= render 'layouts/head' %>
+</head>
+<body>
+	<header>
+		<%= render 'layouts/nav' %>
+	</header>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    
-  </head>
+	<main>
+  	<%= yield %>
+	</main>
 
-  <body>
-    <%= yield %>
-  </body>
+	<footer>
+		<%= render 'layouts/footer' %>
+	</footer>
+</body>
 </html>
