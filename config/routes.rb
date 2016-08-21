@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
 
-  devise_for :astronomers
-
   root 'pages#home'
 
   get '/about', to: 'pages#about'
-  
-  resources :profiles, only: [:show, :edit, :update]
+  get '/contact', to: 'pages#contact'
+
+  devise_for :astronomers
+  resources :astronomers
+
+  resources :categories do
+    resources :posts
+  end
 
 end
