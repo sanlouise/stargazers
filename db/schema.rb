@@ -23,6 +23,11 @@ ActiveRecord::Schema.define(version: 20160818141447) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "nationality"
+    t.string   "bio"
+    t.string   "image"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.index ["email"], name: "index_astronomers_on_email", unique: true
@@ -35,33 +40,18 @@ ActiveRecord::Schema.define(version: 20160818141447) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "image_posts", force: :cascade do |t|
-    t.integer  "user_id"
-    t.string   "image"
-    t.string   "location"
+  create_table "posts", force: :cascade do |t|
+    t.integer  "astronomer_id"
+    t.integer  "category_id"
+    t.string   "upload"
+    t.string   "city"
+    t.string   "country"
+    t.decimal  "lat"
+    t.decimal  "lon"
     t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "profiles", force: :cascade do |t|
-    t.integer  "user_id"
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "nationality"
-    t.string   "bio"
-    t.string   "image"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "video_posts", force: :cascade do |t|
-    t.integer  "user_id"
-    t.string   "video"
-    t.string   "location"
-    t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "equipment_used"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
 end
