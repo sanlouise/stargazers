@@ -1,7 +1,6 @@
 class Category < ActiveRecord::Base
 
-  has_many :image_posts
-  has_many :video_posts
+  has_many :posts
 
   validates :name, presence: true
 
