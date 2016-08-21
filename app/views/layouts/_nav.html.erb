@@ -1,40 +1,19 @@
-<!-- Header -->
-<div id="header">
-
-<!-- Inner -->
-<section id="banner">
-	<div class="inner">
-		<header>
-			<h1 class="hero">Stargazers</h1>
-		</header>
-	</div>
-</section>
-
 <!-- Nav -->
-	<nav id="nav">
-		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li>
-				<a href="#">Categories</a>
-				<ul>
-					<li><a href="#">Stars</a></li>
-					<li><a href="#">Moons</a></li>
-					<li><a href="#">Planets</a></li>
-					<li>
-						<a href="#">Universe &hellip;</a>
-						<ul>
-							<li><a href="#">Our Galaxy</a></li>
-							<li><a href="#">Other Galaxy</a></li>
-							<li><a href="#">Other Galaxy</a></li>
-							<li><a href="#">Other Galaxy</a></li>
-						</ul>
-					</li>
-				</ul>
-			</li>
-			<li><a href="left-sidebar.html">Left Sidebar</a></li>
-			<li><a href="right-sidebar.html">Right Sidebar</a></li>
-			<li><a href="no-sidebar.html">No Sidebar</a></li>
-		</ul>
-	</nav>
-
-</div>
+<nav id="nav">
+	<ul>
+		<li><a href="index.html">Home</a></li>
+      <% if astronomer_signed_in? %>
+      
+        <li> <%= link_to "Community", astronomers_path %></li>
+        <li> <%= link_to "Settings", edit_astronomer_registration_path %></li>
+        <li><%= link_to "About", about_path %></li> 
+        <li> <%= link_to "Sign Out", destroy_astronomer_session_path, method: :delete, class: "btn btn-danger" %></li>
+        
+      <% else %>
+      
+        <li><%= link_to "About", about_path %></li> 
+        <li> <%= link_to "Log In", new_astronomer_session_path, method: :get, class: "btn btn-success nav" %></li>
+        
+      <% end %>
+	</ul>
+</nav>
