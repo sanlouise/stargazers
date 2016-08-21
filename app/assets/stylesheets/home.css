@@ -368,9 +368,9 @@
 
 	form label {
 		display: block;
-		font-weight: 400;
-		color: #483949;
-		margin: 0 0 1em 0;
+		font-weight: 300;
+		color: white;
+		margin: 0 0 0.8em 0;
 	}
 
 	form input[type="text"],
@@ -383,7 +383,7 @@
 		border: 0;
 		background: #fafafa;
 		width: 100%;
-		border-radius: 0.5em;
+		border-radius: 0em;
 		border: solid 1px #E5E5E5;
 		padding: 1em;
 		-moz-transition: background-color 0.35s ease-in-out, border-color 0.35s ease-in-out;
