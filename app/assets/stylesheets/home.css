@@ -1511,10 +1511,6 @@
 
 		/* Carousel */
 
-			@media screen and (max-width: 800px)
-			.carousel {
-			    display: none !important;
-			}
 
 			.carousel {
 				padding: 0.5em 0 0.5em 0;
